@@ -1,11 +1,9 @@
 ﻿namespace Courses._20483.UI.ViewModels
 {
-    using System;
     using System.Collections.ObjectModel;
     using System.Linq;
     using System.Windows.Input;
-    using Courses._20483.Core;
-    using Courses._20483.Core.Data;
+    using ProductServices;
 
     public class MainWindowViewModel: ViewModel
     {
@@ -14,17 +12,17 @@
         private int productStock;
         private decimal productPrice;
         private Category category;
-        
+
         private ObservableCollection<Product> products;
         private ObservableCollection<Category> categories;
 
-        private ICommand saveProductCommand;
+        private readonly ProductServiceClient client;
 
-        private readonly UnitOfWork context;
+        private ICommand saveProductCommand;
 
         public MainWindowViewModel()
         {
-            this.context = new UnitOfWork();
+            this.client = new ProductServiceClient();
         }
 
         public string ProductName
@@ -83,7 +81,7 @@
             {
                 if( this.products == null )
                 {
-                    this.products = new ObservableCollection<Product>( context.Products.ToList() );
+                    this.products = new ObservableCollection<Product>( this.client.GetProducts().ToList() );
                 }
 
                 return this.products;
@@ -96,7 +94,7 @@
             {
                 if( this.categories == null )
                 {
-                    this.categories = new ObservableCollection<Category>( context.Categories.ToList() );
+                    this.categories = new ObservableCollection<Category>( this.client.GetCategories().ToList() );
                 }
 
                 return this.categories;
@@ -127,17 +125,8 @@
                 Stock = this.ProductStock,
             };
 
-            try
-            {
-                context.Products.Add( product );
-                context.SaveChanges();
-
-                this.Products.Add( product );
-            }
-            catch( Exception ex )
-            {
-                throw;
-            }
+            this.client.CreateProduct( product );
+            this.Products.Add( product );
         }
     }
 }

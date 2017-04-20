@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="77159157-1896-4421-b96f-591cd08057d3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://course20483service.azurewebsites.net/ProductService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProductService.xsd" MetadataType="Schema" ID="35f155b7-4045-4de9-bd14-9fdbdc78e56c" SourceId="1" SourceUrl="http://course20483service.azurewebsites.net/ProductService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProductService1.xsd" MetadataType="Schema" ID="4af3deb5-a3e1-4082-8239-80dc463f3f41" SourceId="1" SourceUrl="http://course20483service.azurewebsites.net/ProductService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProductService.disco" MetadataType="Disco" ID="c69b352d-0b17-4fbb-b4bf-deb4129c32ec" SourceId="1" SourceUrl="http://course20483service.azurewebsites.net/ProductService.svc?disco" />
+    <MetadataFile FileName="ProductService2.xsd" MetadataType="Schema" ID="b0faa8fc-e2b4-42e1-8de1-fedc89179a9d" SourceId="1" SourceUrl="http://course20483service.azurewebsites.net/ProductService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProductService.wsdl" MetadataType="Wsdl" ID="c55d3418-f176-4de0-b7c6-e43e15fa24e0" SourceId="1" SourceUrl="http://course20483service.azurewebsites.net/ProductService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ProductService1.wsdl" MetadataType="Wsdl" ID="d5811583-b598-4962-acc4-36df88e2c9ee" SourceId="1" SourceUrl="http://course20483service.azurewebsites.net/ProductService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

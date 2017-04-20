@@ -63,7 +63,7 @@
                         <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />
                         <GridViewColumn Header="Price" Width="50" DisplayMemberBinding="{Binding Price, StringFormat=C2}" />
                         <GridViewColumn Header="Stock" Width="150" DisplayMemberBinding="{Binding Stock}" />
-                        <GridViewColumn Header="Category" Width="150" DisplayMemberBinding="{Binding Category.Name}" />
+                        <GridViewColumn Header="Category" Width="150" DisplayMemberBinding="{Binding CategoryName}" />
                     </GridView>
                 </ListView.View>
             </ListView>
