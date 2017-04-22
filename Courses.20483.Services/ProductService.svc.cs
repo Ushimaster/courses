@@ -1,35 +1,35 @@
 ﻿namespace Courses._20483.Services
 {
     using System.Collections.Generic;
-    using System.Linq;
-    using Courses._20483.Core.Data;
+    using Courses._20483.Application.Dtos;
 
     public class ProductService: IProductService
     {
-        private UnitOfWork context;
+        private readonly Application.IProductService applicationService;
 
         public ProductService()
+            : this( new Application.ProductService() )
         {
-            this.context = new UnitOfWork();
+        }
+
+        public ProductService( Application.IProductService applicationService  )
+        {
+            this.applicationService = applicationService;
         }
 
         public IEnumerable<Category> GetCategories()
         {
-            var categories = from category in context.Categories select category;
-            return Mapper.MapToServiceCategories( categories );
+            return this.applicationService.GetCategories();
         }
 
-        public void CreateProduct( Product product )
+        public void CreateProduct( Product dto )
         {
-            Core.Product dto = Mapper.MapToDomainProduct( product );
-            this.context.Products.Add( dto );
-            this.context.SaveChanges();
+            this.applicationService.CreateProduct( dto );
         }
 
         public IEnumerable<Product> GetProducts()
         {
-            var products = ( from product in context.Products select product ).ToList();
-            return Mapper.MapToServiceProducts( products );
+            return this.applicationService.GetProducts();
         }
     }
 }

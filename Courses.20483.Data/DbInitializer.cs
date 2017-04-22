@@ -1,6 +1,7 @@
-﻿namespace Courses._20483.Core.Data
+﻿namespace Courses._20483.Data
 {
     using System.Data.Entity;
+    using Courses._20483.Core;
 
     public class DbInitializer: CreateDatabaseIfNotExists<UnitOfWork>
     {

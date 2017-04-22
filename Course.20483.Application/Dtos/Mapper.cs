@@ -1,4 +1,4 @@
-﻿namespace Courses._20483.Services
+﻿namespace Courses._20483.Application.Dtos
 {
     using System.Collections.Generic;
 
@@ -22,16 +22,12 @@
             return dtos;
         }
 
-        public static Core.Product MapToDomainProduct( Product product )
+        public static Core.Product MapToDomainProduct( Product dto )
         {
-            return new Core.Product
-            {
-                CategoryId = product.CategoryId,
-                Name = product.Name,
-                Description = product.Description,
-                Price = product.Price,
-                Stock = product.Stock,
-            };
+            var product = new Core.Product( dto.Name, dto.Price, dto.Stock, dto.CategoryId );
+            product.Description = product.Description;
+
+            return product;
         }
 
         public static IEnumerable<Product> MapToServiceProducts( IEnumerable<Core.Product> products )

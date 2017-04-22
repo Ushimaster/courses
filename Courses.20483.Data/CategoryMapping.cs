@@ -1,7 +1,8 @@
-﻿namespace Courses._20483.Core.Data
+﻿namespace Courses._20483.Data
 {
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.ModelConfiguration;
+    using Courses._20483.Core;
 
     public class CategoryMapping: EntityTypeConfiguration<Category>
     {

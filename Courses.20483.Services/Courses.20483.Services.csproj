@@ -70,10 +70,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs" />
     <Compile Include="IProductService.cs" />
-    <Compile Include="Mapper.cs" />
-    <Compile Include="Product.cs" />
     <Compile Include="ProductService.svc.cs">
       <DependentUpon>ProductService.svc</DependentUpon>
     </Compile>
@@ -94,9 +91,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Courses.20483.Core\Courses.20483.Core.csproj">
-      <Project>{beb3f93c-e072-4919-afb7-82fe0a3950e9}</Project>
-      <Name>Courses.20483.Core</Name>
+    <ProjectReference Include="..\Course.20483.Application\Courses.20483.Application.csproj">
+      <Project>{42d9fb82-2f20-44f0-be82-007168be2096}</Project>
+      <Name>Courses.20483.Application</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

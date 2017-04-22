@@ -1,4 +1,4 @@
-﻿namespace Courses._20483.Services
+﻿namespace Courses._20483.Application.Dtos
 {
     using System.Runtime.Serialization;
 

@@ -15,7 +15,7 @@ namespace Courses._20483.UI.ProductServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Category", Namespace="http://schemas.datacontract.org/2004/07/Courses._20483.Services")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Category", Namespace="http://schemas.datacontract.org/2004/07/Courses._20483.Application.Dtos")]
     [System.SerializableAttribute()]
     public partial class Category : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -76,7 +76,7 @@ namespace Courses._20483.UI.ProductServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Product", Namespace="http://schemas.datacontract.org/2004/07/Courses._20483.Services")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Product", Namespace="http://schemas.datacontract.org/2004/07/Courses._20483.Application.Dtos")]
     [System.SerializableAttribute()]
     public partial class Product : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -210,10 +210,10 @@ namespace Courses._20483.UI.ProductServices {
         System.Threading.Tasks.Task<Courses._20483.UI.ProductServices.Category[]> GetCategoriesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://course20483.com/IProductService/CreateProduct", ReplyAction="http://course20483.com/IProductService/CreateProductResponse")]
-        void CreateProduct(Courses._20483.UI.ProductServices.Product product);
+        void CreateProduct(Courses._20483.UI.ProductServices.Product dto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://course20483.com/IProductService/CreateProduct", ReplyAction="http://course20483.com/IProductService/CreateProductResponse")]
-        System.Threading.Tasks.Task CreateProductAsync(Courses._20483.UI.ProductServices.Product product);
+        System.Threading.Tasks.Task CreateProductAsync(Courses._20483.UI.ProductServices.Product dto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://course20483.com/IProductService/GetProducts", ReplyAction="http://course20483.com/IProductService/GetProductsResponse")]
         Courses._20483.UI.ProductServices.Product[] GetProducts();
@@ -257,12 +257,12 @@ namespace Courses._20483.UI.ProductServices {
             return base.Channel.GetCategoriesAsync();
         }
         
-        public void CreateProduct(Courses._20483.UI.ProductServices.Product product) {
-            base.Channel.CreateProduct(product);
+        public void CreateProduct(Courses._20483.UI.ProductServices.Product dto) {
+            base.Channel.CreateProduct(dto);
         }
         
-        public System.Threading.Tasks.Task CreateProductAsync(Courses._20483.UI.ProductServices.Product product) {
-            return base.Channel.CreateProductAsync(product);
+        public System.Threading.Tasks.Task CreateProductAsync(Courses._20483.UI.ProductServices.Product dto) {
+            return base.Channel.CreateProductAsync(dto);
         }
         
         public Courses._20483.UI.ProductServices.Product[] GetProducts() {

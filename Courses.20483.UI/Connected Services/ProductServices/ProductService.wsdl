@@ -4,7 +4,7 @@
     <xsd:schema targetNamespace="http://course20483.com/Imports">
       <xsd:import schemaLocation="http://course20483service.azurewebsites.net/ProductService.svc?xsd=xsd0" namespace="http://course20483.com" />
       <xsd:import schemaLocation="http://course20483service.azurewebsites.net/ProductService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://course20483service.azurewebsites.net/ProductService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Courses._20483.Services" />
+      <xsd:import schemaLocation="http://course20483service.azurewebsites.net/ProductService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Courses._20483.Application.Dtos" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IProductService_GetCategories_InputMessage">
